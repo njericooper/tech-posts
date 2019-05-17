@@ -1,4 +1,69 @@
-<html>
-    * Flexbox Blog with Parallax Scroll Hero Image
-    <p>This week I decided to take initive to learn flexbox inside and out. Here are the key points that I personally struggled with and here are some cool ways I learned to work with flex.</p> 
-</html>
+---
+title: Flexbox Blog Part 1 - The Nav Bar
+published: true
+description: Flexbox Layout of a Blog Feature by Feature 
+tags: 
+---
+
+<p> CSS Flexbox is a uni-directional way layout components of your website one at a time. Elements can only be ordered in either a row or in a column when the display is set to "flex" then ordered and spaced to it's desired position. For ease and brevity, I quickly learned the importance of creating containers for all of my items/child elements. </p>
+
+<p> The first feature I tackled was the nav bar. Creating a simple nav bar in CSS Flexbox was simpler than I thought. Here's a snippet of the HTML and CSS I used.</p>
+
+**HTML**
+
+<nav class="nav-container">
+            <ul class="nav-items">
+                <li><a href="#">Home</a></li>
+    
+                <li><a href="#">About</a></li>
+    
+                <li><a href="#">Blog</a></li>
+    
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+**CSS**
+   
+body, html{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                font-family: Arial;
+}
+.nav-items{
+          list-style: none;
+          margin: 0; 
+          background: black;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-end;
+                
+}
+            
+.nav-items a{
+          text-decoration: none;
+          display: block;
+          padding: 1em;
+          color: white;
+          font-size: 2em;
+}
+            
+.nav-items a:hover{
+          text-decoration: underline;
+}
+
+
+
+
+<p> For the nav bar, I didn't need to style the nav container itself, instead, we're just going to apply flex as the display the nav items. "Flex-flow" is a shorthand element that combines "flex-direction" and "flex-wrap". It determines whether the direction is going to be in a horizontal row or in a vertical column and also if the items will wrap around to the next line, wrap in reverse, or not wrap at all.</p>
+    
+<p>"nowrap" is the default, so I changed it to "wrap". I also applied a wrap to the row for responsitivity (hamburger menu for mobile coming soon).</p>
+
+<p> "Justify-content" sets the alignment of the items in the container. Just like with text, there's right, center, and left, but we use "flex-start" to align items towards the beginning, "center", and "flex-end" for alignment towards the end of the flex container; there are a few other options that set the spacing of items, but they are not necessary here. For this nav bar, I chose "flex-end" for the nav-items and added 1 em of padding between each a tag. </p>
+    
+{% codepen https://codepen.io/njericooper/pen/QRKeBo %}
+    
+<p> If you know any other cases for flexbox let me know on [Twitter](https://twitter.com/njericooper)
+
+{% twitter 1129082616345432064%}
