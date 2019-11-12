@@ -1,0 +1,32 @@
+---
+title: CSS Flexbox Hero Image - Building a Blog, Part 2
+published: false
+description: 
+tags: #CSS, #FlexBox, #WebDev, #ShowDev
+---
+Flexbox is a CSS tool used to layout parts of pages on the web in either a row or column. In my previous post, I highlighted some key aspects of flexbox and how to use it to make a nav bar for a  blog. Check out the post here (insert mint to Flex Nav post). I added a media query that turns the bar layout into a hamburger menu for screens smaller than 768px. [Check out the code for the responsive flexbox nav + hamburger menu here](https://codepen.io/njericooper/pen/rgJZBo). 
+
+Below the menu, a site usually has some imagery or headlining text elements to intro the content on the page. For my blog, I created a flexbox hero image with a parallax scroll. Parallax is an effect that fixes a part of a webpage to the background while other elements scroll over it. 
+
+Here's the code I used for my Hero Image:
+
+###HTML: 
+
+![made with Carbon](https://thepracticaldev.s3.amazonaws.com/i/finqnhog441bdw3skrhm.png)
+
+###CSS:
+![flexbox parallax hero image](https://thepracticaldev.s3.amazonaws.com/i/23axng0i29ikpdg8bga2.png)
+
+I created a div tag with a class "hero-image" to be the container for the image, text, and scroll effect. This container's CSS displays flexbox in a column. The result affects the text and any other elements put inside of the div with the "hero-image" class.
+
+####The background image
+For design purposes, I created a 0.5 linear-gradient to put over the image to help the text stand out. The image is set to not repeat, to cover the full width, height and fixed to the center of its container. The image will take up 50% of the screen, but for smaller devices, I've set the minimum height to 15em (or 240px).
+
+####The text
+I set both the header and sub-text to align center by editing the "hero-text" class.
+ 
+
+{% codepen https://codepen.io/njericooper/pen/NVRQLe %}
+
+If you have other cool implications of flexbox,[reach out to me on Twitter](https://twitter.com/intent/user?screen_name=@njericooper) 
+{% twitter 1131599514538786816%}
