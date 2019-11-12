@@ -1,0 +1,46 @@
+---
+title: Serverless Something
+published: false
+description: 
+tags: 
+---
+Learning about Headless CMS, React, JSON, Gatsby, Contentful, Netlify, etc. 
+How was it to transition from HTML & CSS to React based modular pages. 
+
+
+. How to take the headache out of deploying your website. the three web development tools that are simplifying the way we are getting content online. What most important to know before making a site with Gatsby.
+
+intro.
+
+I spent 10 years as a stray Lance weird face designer. Taking clients designing a custom website with PHP putting it on to word press and simply handing it over. The timeline and the headache that it took was huge. And last week I was challenged to learn server-less development before taking on another client. 
+
+The 5 main points of serverless development are:
+- yes. There’s a server somewhere, but it’s not yours. You get to borrow or buy some space, though. 
+- What content management service are you going to use? We could still use things like WordPress I have supplies on consent form or even hand Cove and all of your content yourself in HTMLCSS and JavaScript.
+- It’s a lot easier if you use a simple Frontend architecture and a framework. (Psttttt. ReactJS comes in handy here.
+- The website will be static. So it’s easiest to just pulling data from a different place. Learning how to use APIs will make the transition a lot easier.
+- Break it up. And make it reusable. It’s best to have a modular file structure for each component of the website and collagen to different places. In CSS this is called utility classes.
+
+
+Here’s a demo of a Gatsby riplit:
+{ replit linkURL }
+
+The main parts of this site are in the folders pages components and layouts.
+
+The layout folder has the files that breaks down the structure and style for the pages.
+
+The only component on our pages is the header that has the title of the website in it. the header js file includes the ability to link to other pages and A constant called header that defines the header as the sites title. The title of the website is actually being pulled in from a different file. Gatsby-config.JS has the module exports with the objects site metadata which also has its own objects and keys title which says get speed default starter, and the next key is plug-ins. The plug-in that we are using is a Gatsby plug-in react helmet. Gaspee plug-in react helmet adds metaData to the site using React. This MetaData could include the title, other attributes like _ and _. This is huge for Search results and other SEO stuff. Check out the documentation in this plugin here (https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/)
+
+ inside of the header constant, there is more CSS in React and a link to the “home” page. 
+
+The header constant is in the layout of both pages. 
+
+The layout is in layout/index.js and is how the pages in “pages/index.js” and “page-2.js” 
+
+In these pages, constants are defined with all of the page HTML in it. The constants are exported so that other pages have access to it. 
+
+This example is very basic, but their are other methods of displaying data on each page. Instead of typing in the h1 tag, the data could be stored in a CMS or in a different file and “called”. 
+
+Since were using React, it would look something like this <h1>"object.key"</h1>
+or "variableName.object"
+
